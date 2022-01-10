@@ -6,7 +6,6 @@ var select = [0,0,0,0,0,0,0,0,0,0,0,0];
 
 // 결과창을 만들기 위한 함수
 function calResult(){
-
   var result = select.indexOf(Math.max(...select));
 
   return result;
@@ -14,7 +13,21 @@ function calResult(){
 
 function setResult() {
   let point = calResult();
+  const resultName = document.querySelector('.resultName');
+  resultName.innerHTML = infoList[point].name;
 
+  var resultImg = document.createElement('img');
+  const imgDiv = document.querySelector('#resultImg');
+  var imgURL = 'img/image-' + point + '.png';
+
+  resultImg.src = imgURL;
+  resultImg.alt = point;
+  resultImg.classList.add('img-fluid');
+
+  imgDiv.appendChild(resultImg);
+
+  const resultDesc = document.querySelector('.resultDesc');
+  resultDesc.innerHTML = infoList[point].desc;
 }
 
 function goResult () {
