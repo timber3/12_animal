@@ -1,0 +1,50 @@
+/* qna를 위한 css 페이지 */
+#qna {
+  display : none;
+}
+
+.qBox {
+  background-color: whitesmoke;
+  text-align: center;
+  border-radius: 40px;
+  font-size: 24px;
+}
+
+.answerList{
+  background-color: whitesmoke;
+  border-radius: 10px;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 0px;
+}
+
+.answerList:hover{
+  background-color: #EF84C1;
+  color: whitesmoke;
+}
+
+.answerList:focus{
+  background-color: #C8707E;
+  color: whitesmoke;
+}
+
+.status{
+  height: 20px;
+  width : 80%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.statusBar{
+  border-radius: 20px;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcecfc+0,fba6e1+50,fd89d7+51,ff7cd8+100;Pink+Gloss+%232 */
+background: #fcecfc; /* Old browsers */
+background: -moz-linear-gradient(top,  #fcecfc 0%, #fba6e1 50%, #fd89d7 51%, #ff7cd8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #fcecfc 0%,#fba6e1 50%,#fd89d7 51%,#ff7cd8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #fcecfc 0%,#fba6e1 50%,#fd89d7 51%,#ff7cd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#ff7cd8',GradientType=0 ); /* IE6-9 */
+
+}

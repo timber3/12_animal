@@ -1,0 +1,8 @@
+/* 파일 전체적으로 영향이 가는 css 파일 */
+body {
+  background-color: pink;
+}
+
+*{
+  font-family: 'Single Day', cursive;
+}
