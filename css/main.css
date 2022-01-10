@@ -9,3 +9,23 @@
 h3 {
   font-size : 17px;
 }
+
+.btn {
+  background-color: pink;
+  border-color : #EF84C1;
+  color : whitesmoke;
+  outline : none;
+}
+
+.btn:hover, .btn:focus{
+  background-color: whitesmoke;
+  color: #C8707E;
+  border-color: #EF84C1;
+  box-shadow : pink;
+  outline : none !important;
+  box-shadow: 2px 2px 2px pink;
+}
+
+.btn:active {
+
+}
