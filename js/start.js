@@ -3,18 +3,38 @@ const qna = document.querySelector('#qna');
 const endPoint = 12;
 const result = document.querySelector('#result');
 var select = [0,0,0,0,0,0,0,0,0,0,0,0];
+const answerList = [0,0,0,0,0,0,0,0,0,0,0];
+
+
+function selectedResult() {
+  var temp = document.querySelector('selectedAnswer');
+  for (i in select)
+  {
+    temp.innerHTML = qnaList[i].q;
+  }
+}
 
 // 결과창을 만들기 위한 함수
 function calResult(){
   var result = select.indexOf(Math.max(...select));
-
   return result;
 }
 
 function setResult() {
+  //selectedResult();
   let point = calResult();
   const resultName = document.querySelector('.resultName');
   resultName.innerHTML = infoList[point].name;
+
+
+  const answerGroup = document.querySelector('.answerGroup');
+  for (let i = 0 ; i < answerList.length ; i++)
+  {
+    let tempLI = document.createElement('li');
+    let tempText = qnaList[i].q + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;answer : ' + qnaList[i].a[answerList[i]].answer;
+    tempLI.innerHTML = tempText;
+    answerGroup.appendChild(tempLI);
+  }
 
   var resultImg = document.createElement('img');
   const imgDiv = document.querySelector('#resultImg');
@@ -62,7 +82,9 @@ function addAnswer(answerText, qIdx, idx)
   //만든 버튼을 a 즉 answerBox라는 class를 가진 요소의 자식으로 넣음.
   answer.innerHTML = answerText;
 
-  answer.addEventListener("click",function(){
+  answer.addEventListener("click",
+  function(){
+    answerList[qIdx] = idx;
     var children = document.querySelectorAll('.answerList');
     for (let i = 0 ; i < children.length; i++){
       children[i].disabled = true;
